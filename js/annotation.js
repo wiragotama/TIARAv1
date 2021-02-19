@@ -373,7 +373,7 @@ function tsvFileFormatting(filename, content) {
             }
             var newNodeSentence = document.createElement("div");
             newNodeSentence.className = "flex-item";
-            newNodeSentence.id = "sentence"+(i+1);
+            newNodeSentence.id = "sentence"+(sentence_id);
             sentenceFormat = replaceAll(sentenceContainerHTMLTemplate, "\\[PUT_SENTENCE_NUMBER_HERE\\]", sentence_id);
             sentenceFormat = replaceAll(sentenceFormat, "\\[PUT_SENTENCE_TEXT_HERE\\]", sentence_text);
 
