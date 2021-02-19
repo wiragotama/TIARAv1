@@ -1,0 +1,178 @@
+/* 
+ * by Jan Wira Gotama Putra 
+ */
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    /* To prevent text selection when dragging */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btn-file {
+	font-size: 12px;
+	width: 150px;
+	text-align: center;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.container {
+	text-align: justify;
+}
+
+.essay-code {
+	text-align: left;
+	font-weight: bold;
+}
+
+.draggable-area {
+	font-size: 12px;
+	position: relative;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.sentence-id-number {
+	text-align: right; 
+	/*margin-top: 3px;*/
+	font-size: 20px;
+	border: 1px solid gray;
+	vertical-align: center;
+	padding-bottom: 10px;
+	padding-top: -2px;
+}
+
+.hide {
+	visibility: hidden;
+}
+
+.hide-text {
+	background-color: black;
+}
+
+.hide-text-dropping label {
+	color : white;
+}
+
+.legend {
+	text-align: right;
+	float: right;
+}
+
+.relation-color-mark {
+	float: right;
+	width: 100px;
+	text-align: center;
+	overflow: hidden;
+	padding: 2px;
+	margin-left: 2px;
+	background-color: black;
+	font-weight: normal;
+	border: 2px solid rgba(255,255,255, 1);
+	display: inline-block;
+	direction: ltr;
+}
+
+.relation-menu-button {
+	margin-left:10px; margin-bottom:10px; width:100px; height:25px; overflow:hidden; text-align:center; 
+}
+
+.color-legend {
+	float: right;
+}
+
+.prompt {
+	font-size: 12px;
+	font-family: monospace;
+}
+
+.flex-item {
+	border: 2px solid;
+	padding: 5px;
+	margin-bottom: 25px;
+	position: relative;
+}
+
+.flex-item:focus, .flex-item:active {
+	background: orange;
+}
+
+.flex-item textarea {
+	border:1px solid #cccccc;
+	width:100%;
+}
+
+.relation-label {
+	color: black;
+}
+
+.drop-label {
+	float: left;
+	padding-right: 10px;
+}
+
+.movebutton {
+	float: left;
+	min-width: 25px;
+	text-align: center;
+	padding: 0px;
+	margin-right: 7px;
+	background-color: black;
+	color: white;
+}
+
+.sentence-side-menu {
+	float:left; 
+	padding:0; 
+	display:block;
+}
+
+.under-draggable-menu {
+	text-align: right;
+}
+
+#collapsable-visualization {
+	background-color: white;
+}
+
+.visualization-text {
+	border: 1px solid black;
+	width: 200px;
+	font-size: 12px;
+	background-color: white;
+}
+
+.visualization-text p {
+	padding: 5px;
+	padding-top: 10px;
+}
+
+.visualization-text a {
+	padding: 3px;
+	background-color: black;
+}
+
+#visualization-download-btn {
+	float: left;
+}
+
+.node-desc {
+	padding: none;
+	margin: 0px;
+	font-weight: bold;
+}
+
+.essay_code_hierarchical {
+	text-align: center;
+	align-items: center;
+}

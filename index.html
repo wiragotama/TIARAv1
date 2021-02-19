@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jan Wira Gotama Putra">
+
+    <title> TIARA - Lightweight Annotation Tool </title>
+
+    <!-- Styling -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/annotation.css" rel="stylesheet">
+    <link href="css/hierarchical-view.css" rel="stylesheet">
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/png" bootstrap.min.js>
+    <link href="css/font-awesome-min.css" rel="stylesheet">
+    <link href="css/dialog.css" rel="stylesheet">
+    <link href="css/Treant.css" rel="stylesheet">
+    <link href="css/perfect-scrollbar.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="js/jquery-1.12.4.js"></script>
+  	<script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.html-svg-connect.js"></script>
+    <script src="js/jsplumb.min.js"></script>
+    <script src="js/annotation-globalsetting.js"></script>
+    <script src="js/html2canvas.min.js"></script>
+
+    <script src="js/raphael.js"></script>
+    <script src="js/Treant.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/perfect-scrollbar.js"></script>
+    <script src="js/jquery.easing.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a> 
+                            <label href="" id="save_menu" class="btn btn-default btn-file"> 
+                                Save
+                            </label>
+                        </a>
+                    </li>
+                    <li>
+                        <a> <label class="btn btn-default btn-file">
+                            Load <input type="file" class="hide" id="load-file">
+                        </label> 
+                        </a>   
+                    </li>
+                    <li>
+                        <a> <label href="" id="rel_to_excel" class="btn btn-default btn-file"> 
+                                Export relation to TSV
+                            </label>
+                        </a>   
+                    </li>
+                    <li>
+                        <a> <label href="" id="annotation_to_excel" class="btn btn-default btn-file"> 
+                                Export file to TSV
+                            </label>
+                        </a>   
+                    </li>
+                    <li>
+                        <a> <label href="" id="text_view" class="btn btn-default btn-file"> 
+                                Text View
+                            </label>
+                        </a>   
+                    </li>
+                    <li>
+                        <a> <label href="" id="tree_view" class="btn btn-default btn-file"> 
+                                Tree View
+                            </label>
+                        </a>   
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Space -->
+        <div class="row">
+            <br>
+            <br>
+        </div>
+        <!-- /.row -->
+
+        <!-- Annotation Items -->
+        <div id="main-area" class="row">
+            <!-- Dialog -->
+            <div class="row">
+                <div class="relation-dialog" id="relation-dialog" title="Relation option">
+                    Choose one of available relations below or delete the connection
+                </div>
+            </div>
+
+            <!-- Edit area -->
+            <div class="row">
+                <div class="col-lg-1">
+                </div>
+                <!-- Save and load this whole area -->
+                <div class="col-lg-10 draggable-area" id="draggable-area"> 
+                </div>
+                <div class="col-lg-1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1">
+                </div>
+                <div class="col-lg-10 under-draggable-menu">
+                    <button id="add_sentence_box" class="btn btn-info"> 
+                        <i class="glyphicon glyphicon-plus"></i> Add New Sentence
+                    </button>
+                </div>
+                <div class="col-lg-1">
+                </div>
+            </div>
+        </div> 
+
+        <!-- Visualization -->
+        <div class="row" id="hierarchical-view-menu">
+            <div class="col-lg-1">
+            </div>
+            <div class="col-lg-3">
+                <button id="visualization-download-btn" class="btn btn-info"> 
+                    Capture Image 
+                </button>
+            </div>
+            <div class="col-lg-7" style="text-align:right">
+                <button id="hierarchical-view-ensmall" class="btn btn-info"> 
+                    <i class="glyphicon glyphicon-zoom-out"></i> Shrink
+                </button>
+                <button id="hierarchical-view-enlarge" class="btn btn-info"> 
+                    <i class="glyphicon glyphicon-zoom-in"></i> Enlarge
+                </button>
+            </div>
+            <div class="col-lg-1">
+            </div>
+        </div>
+
+        <div id="hierarchical-view">
+            <div class="row">
+                <div class="col-lg-12" style="text-align: center">
+                    <h4 id="essay_code_hierarchical"> ESSAY_TRIAL_00 </h4> 
+                </div>
+            </div>
+            <div class="row">
+            </div>
+            <div class="row chart" id="collapsable-visualization">
+                
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Main Script -->
+    <script src="js/annotation.js"></script>
+</body>
+
+</html>
